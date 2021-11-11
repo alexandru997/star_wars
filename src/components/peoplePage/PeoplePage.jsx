@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
-import { withErrorApi } from "../../hoc-helpers/withErrorApi";
+import { withErrorApi } from "@hoc-helpers/withErrorApi";
 
-import { getApiResurce } from "../../utils/network";
-import { API_PEOPLE } from "../../constants/api";
-import { getPeopleId, getPeopleImg } from "../../services/getPeopleData";
+import { getApiResurce } from "@utils/network";
+import { API_PEOPLE } from "@constants/api";
+import { getPeopleId, getPeopleImg } from "@services/getPeopleData";
 import PeopleList from "./poepleList/PeopleList";
 
 // import styles from "./PeoplePage.module.css";
