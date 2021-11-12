@@ -6,6 +6,8 @@ import { API_PEOPLE } from "@constants/api";
 import { getPeopleId, getPeopleImg } from "@services/getPeopleData";
 import PeopleList from "./poepleList/PeopleList";
 
+import PropTypes from "prop-types";
+
 // import styles from "./PeoplePage.module.css";
 function PeoplePage({ setErrorApi }) {
   const [people, setPeople] = useState(null);
@@ -30,11 +32,15 @@ function PeoplePage({ setErrorApi }) {
   }, []);
   return (
     <div>
-      <h1>Navigation</h1>
+      <h1 className="header__text">Navigation</h1>
 
       {people && <PeopleList people={people} />}
     </div>
   );
 }
+
+PeoplePage.prototype = {
+  setErrorApi: PropTypes.func,
+};
 
 export default withErrorApi(PeoplePage);

@@ -1,5 +1,7 @@
 import React from "react";
 import styles from "./PeopleList.module.css";
+import PropTypes from "prop-types";
+
 function PeopleList({ people }) {
   return (
     <div>
@@ -16,5 +18,9 @@ function PeopleList({ people }) {
     </div>
   );
 }
+
+PeopleList.prototype = {
+  people: PropTypes.array,
+};
 
 export default PeopleList;
